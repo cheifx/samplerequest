@@ -1,21 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Sample Request Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infineon sample request form</title>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 32px;
+      border-radius: 32px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #0A8276;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: regular;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      resize: vertical;
+    }
+
+    .optional-label {
+      font-size: 10px;
+      color: #666;
+      margin-top: -5px;
+    }
+
+    .submit-button {
+      background-color: #0A8276;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #06534B;
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Sample Request Form</h1>
-  <form action="https://formspree.io/maker@infineon.com" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
+  <div class="container">
+    <h1>Infineon makers community sample request form</h1>
+    <form data-formspree-id="che.liu@tum.de" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="product-name">Sample product name:</label>
+        <input type="text" id="product-name" name="product-name">
+        <span class="optional-label">(Optional)</span>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="_recipient" value="che.liu@tum.dem">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea><br>
-
-    <input type="submit" value="Submit">
-  </form>
+  <script src="https://formspree.io/f/js/form-button.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
